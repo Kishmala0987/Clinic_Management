@@ -4,6 +4,11 @@ import { useUser } from '../context/UserContext';
 const Dashboard = () => {
   const { user } = useUser();
 
+  const handleQuickAction = (action) => {
+    // Handle the quick action clicks - you can add navigation or modal logic here
+    console.log(`Quick action clicked: ${action}`);
+  };
+
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-lg shadow p-6">
@@ -13,6 +18,52 @@ const Dashboard = () => {
         <p className="text-gray-600">
           You are logged in as: <span className="font-medium capitalize">{user?.role}</span>
         </p>
+      </div>
+
+      {/* Quick Actions */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <button
+            onClick={() => handleQuickAction('add-patient')}
+            className="bg-blue-50 hover:bg-blue-100 rounded-lg p-6 text-center transition-colors duration-200 group"
+          >
+            <div className="w-8 h-8 mx-auto mb-3 text-blue-600 text-2xl flex items-center justify-center">
+              <span className="group-hover:scale-110 transition-transform duration-200">+</span>
+            </div>
+            <p className="text-blue-700 font-medium">Add Patient</p>
+          </button>
+
+          <button
+            onClick={() => handleQuickAction('new-appointment')}
+            className="bg-green-50 hover:bg-green-100 rounded-lg p-6 text-center transition-colors duration-200 group"
+          >
+            <div className="w-8 h-8 mx-auto mb-3 text-green-600 text-xl flex items-center justify-center">
+              <span className="group-hover:scale-110 transition-transform duration-200">📅</span>
+            </div>
+            <p className="text-green-700 font-medium">New Appointment</p>
+          </button>
+
+          <button
+            onClick={() => handleQuickAction('create-invoice')}
+            className="bg-purple-50 hover:bg-purple-100 rounded-lg p-6 text-center transition-colors duration-200 group"
+          >
+            <div className="w-8 h-8 mx-auto mb-3 text-purple-600 text-2xl flex items-center justify-center">
+              <span className="group-hover:scale-110 transition-transform duration-200">$</span>
+            </div>
+            <p className="text-purple-700 font-medium">Create Invoice</p>
+          </button>
+
+          <button
+            onClick={() => handleQuickAction('update-inventory')}
+            className="bg-orange-50 hover:bg-orange-100 rounded-lg p-6 text-center transition-colors duration-200 group"
+          >
+            <div className="w-8 h-8 mx-auto mb-3 text-orange-600 text-xl flex items-center justify-center">
+              <span className="group-hover:scale-110 transition-transform duration-200">📦</span>
+            </div>
+            <p className="text-orange-700 font-medium">Update Inventory</p>
+          </button>
+        </div>
       </div>
 
       {/* Stats Grid */}
@@ -70,4 +121,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

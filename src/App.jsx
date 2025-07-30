@@ -3,6 +3,17 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { UserProvider, useUser } from './context/UserContext';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
+import UserRoleManagement from './pages/UserRoleManagement';
+import DoctorManagement from './pages/Doctor Management'
+import PatientManagement from './pages/Patient Management';
+import AppointmentManagement from './pages/Appointment Management';
+import VisitManagement from './pages/Visit Management';
+import BillingInvoicing from './pages/Billing & Invoicing';
+import InventoryPharmacy from './pages/InventoryPharmacy';
+import PatientPortal from './pages/PatientPortal';
+import LabManagement from './pages/Lab Management';
+import ReportsAnalytics from './pages/Report & Analytics';
+import Notifications from './pages/Notifications';
 import './App.css';
 
 // Loading component
@@ -46,57 +57,57 @@ function AppContent() {
         } />
         <Route path="/users" element={
           <ProtectedRoute>
-            <PlaceholderPage title="User & Role Management" />
+            <UserRoleManagement/>
           </ProtectedRoute>
         } />
         <Route path="/doctors" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Doctor Management" />
+            <DoctorManagement/>
           </ProtectedRoute>
         } />
         <Route path="/patients" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Patient Management" />
+            <PatientManagement></PatientManagement>
           </ProtectedRoute>
         } />
         <Route path="/appointments" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Appointments" />
+            <AppointmentManagement></AppointmentManagement>
           </ProtectedRoute>
         } />
         <Route path="/visits" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Visit Management" />
+            <VisitManagement></VisitManagement>
           </ProtectedRoute>
         } />
         <Route path="/billing" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Billing & Invoicing" />
+            <BillingInvoicing/>
           </ProtectedRoute>
         } />
         <Route path="/inventory" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Inventory & Pharmacy" />
+            <InventoryPharmacy/>
           </ProtectedRoute>
         } />
         <Route path="/lab" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Lab Management" />
+            <LabManagement></LabManagement>
           </ProtectedRoute>
         } />
         <Route path="/portal" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Patient Portal" />
+            <PatientPortal/>
           </ProtectedRoute>
         } />
         <Route path="/notifications" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Notifications" />
+            <Notifications/>
           </ProtectedRoute>
         } />
         <Route path="/reports" element={
           <ProtectedRoute>
-            <PlaceholderPage title="Reports & Analytics" />
+            <ReportsAnalytics></ReportsAnalytics>
           </ProtectedRoute>
         } />
       </Routes>

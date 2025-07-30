@@ -20,7 +20,7 @@ export const UserProvider = ({ children }) => {
     const mockUser = {
       id: 1,
       name: 'User',
-      role: 'doctor', // test different roles: 'admin', 'doctor', 'receptionist', 'patient'
+      role: 'admin', // test different roles: 'admin', 'doctor', 'receptionist', 'patient'
       email: 'admin@clinicpro.com'
     };
     

@@ -1,5 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import { Bell } from 'lucide-react';
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,10 @@ const Layout = ({ children }) => {
               Clinic Management System
             </h1>
             <div className="flex items-center space-x-4">
+              <Link to="/notifications" className="p-2 hover:bg-gray-100 rounded-lg relative">
+                <Bell className="w-5 h-5 text-gray-600" />
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              </Link>
               <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
             </div>
           </div>
