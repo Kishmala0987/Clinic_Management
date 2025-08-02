@@ -56,7 +56,7 @@ const Sidebar = () => {
                 }`
               }
             >
-              <div className={` inline flex items-center justify-center h-8 w-8 rounded-lg ${item.color} bg-opacity-10 group-hover:bg-opacity-20`}>
+              <div className={`flex items-center justify-center h-8 w-8 rounded-lg ${item.color} bg-opacity-10 group-hover:bg-opacity-20`}>
                 <Icon className={`w-5 h-5 ${item.color.replace('bg', 'text')}`} />
               </div>
               {!isCollapsed && (
